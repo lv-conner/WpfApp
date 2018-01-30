@@ -30,7 +30,10 @@ namespace WpfApp2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(model.Data.ToString());
+            this.Dispatcher.Invoke(() =>
+            {
+                MessageBox.Show(model.Data.ToString());
+            });
         }
     }
 }

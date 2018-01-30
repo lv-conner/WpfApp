@@ -24,5 +24,9 @@
         <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Red" Text="{Binding Data.Password}"></TextBox>
         <Button Grid.Row="2" Grid.Column="1" Click="Button_Click">Show</Button>
         <Button Grid.Row="2" Grid.Column="2" Command="{Binding Command}">AddPrefix</Button>
+        <Canvas Grid.Row="3" Grid.Column="1">
+            <Rectangle Fill="Red" Width="100" Height="100"></Rectangle>
+            <Ellipse Height="100" Width="100" Fill="Black" Margin="0 100 0 0" Stretch="Fill" Stroke="Green"></Ellipse>
+        </Canvas>
     </Grid>
 </Window>
