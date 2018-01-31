@@ -13,35 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp2
+namespace WpfApp3
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// FirstPage.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class FirstPage : Page
     {
-        public ViewModel model;
-        private NavigationService  navigationService;
-        public MainWindow()
+        public FirstPage()
         {
             InitializeComponent();
-            model = new ViewModel();
-            this.DataContext = model;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Dispatcher.Invoke(() =>
-            {
-                MessageBox.Show(model.Data.ToString());
-            });
-        }
-
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            var page = new Page1();
-            this.Content = page;
+            NavigationService.GoBack();
         }
     }
 }
